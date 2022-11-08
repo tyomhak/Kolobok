@@ -103,18 +103,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4550483691014934626, guid: 689efc0674a88f543832ccfe4c085656,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550483691014934626, guid: 689efc0674a88f543832ccfe4c085656,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550483691014934626, guid: 689efc0674a88f543832ccfe4c085656,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550483691014934626, guid: 689efc0674a88f543832ccfe4c085656,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.037
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4550483691014934626, guid: 689efc0674a88f543832ccfe4c085656,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.72
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4550483691014934626, guid: 689efc0674a88f543832ccfe4c085656,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.266
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4550483691014934626, guid: 689efc0674a88f543832ccfe4c085656,
         type: 3}
@@ -151,18 +166,44 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4550483691014934626, guid: 689efc0674a88f543832ccfe4c085656,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550483691014934627, guid: 689efc0674a88f543832ccfe4c085656,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550483691014934627, guid: 689efc0674a88f543832ccfe4c085656,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550483691014934627, guid: 689efc0674a88f543832ccfe4c085656,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550483691014934628, guid: 689efc0674a88f543832ccfe4c085656,
+        type: 3}
+      propertyPath: _collider
+      value: 
+      objectReference: {fileID: 3411330160573207586}
     - target: {fileID: 4550483691014934628, guid: 689efc0674a88f543832ccfe4c085656,
         type: 3}
       propertyPath: _objectConfig
       value: 
-      objectReference: {fileID: 11400000, guid: 17297242e91e51241a0c81c86c03e939,
+      objectReference: {fileID: 11400000, guid: baa59880d7c0ee149a45d1aaedd9401f,
         type: 2}
     - target: {fileID: 4550483691014934629, guid: 689efc0674a88f543832ccfe4c085656,
         type: 3}
       propertyPath: m_Name
-      value: pfChristmasObj_3
+      value: pfChristmasObj_2_rabbit
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4550483691014934627, guid: 689efc0674a88f543832ccfe4c085656, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 689efc0674a88f543832ccfe4c085656, type: 3}
 --- !u!4 &5049641133124940160 stripped
 Transform:
@@ -170,3 +211,23 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8734024583788339682}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5049641133124940167 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4550483691014934629, guid: 689efc0674a88f543832ccfe4c085656,
+    type: 3}
+  m_PrefabInstance: {fileID: 8734024583788339682}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &3411330160573207586
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5049641133124940167}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.18
+  m_Height: 0.9
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.41, z: 0}

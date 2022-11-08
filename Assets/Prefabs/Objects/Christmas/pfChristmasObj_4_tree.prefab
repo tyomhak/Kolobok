@@ -20,17 +20,17 @@ PrefabInstance:
     - target: {fileID: 7950027380335972891, guid: b8e299300bf9a474ab17288d33cef1cc,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 50
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 7950027380335972891, guid: b8e299300bf9a474ab17288d33cef1cc,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 50
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 7950027380335972891, guid: b8e299300bf9a474ab17288d33cef1cc,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 50
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 7950027380335972891, guid: b8e299300bf9a474ab17288d33cef1cc,
         type: 3}
@@ -103,6 +103,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4550483691014934626, guid: 689efc0674a88f543832ccfe4c085656,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550483691014934626, guid: 689efc0674a88f543832ccfe4c085656,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550483691014934626, guid: 689efc0674a88f543832ccfe4c085656,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550483691014934626, guid: 689efc0674a88f543832ccfe4c085656,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.037
       objectReference: {fileID: 0}
@@ -151,15 +166,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4550483691014934626, guid: 689efc0674a88f543832ccfe4c085656,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4550483691014934627, guid: 689efc0674a88f543832ccfe4c085656,
         type: 3}
       propertyPath: m_Radius
-      value: 0.6
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4550483691014934627, guid: 689efc0674a88f543832ccfe4c085656,
         type: 3}
       propertyPath: m_Center.y
-      value: 0.54
+      value: 0.79
       objectReference: {fileID: 0}
     - target: {fileID: 4550483691014934628, guid: 689efc0674a88f543832ccfe4c085656,
         type: 3}
@@ -170,7 +190,7 @@ PrefabInstance:
     - target: {fileID: 4550483691014934629, guid: 689efc0674a88f543832ccfe4c085656,
         type: 3}
       propertyPath: m_Name
-      value: pfChristmasObj_4
+      value: pfChristmasObj_4_tree
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 689efc0674a88f543832ccfe4c085656, type: 3}

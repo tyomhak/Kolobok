@@ -14,18 +14,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4550483691014934626, guid: 689efc0674a88f543832ccfe4c085656,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550483691014934626, guid: 689efc0674a88f543832ccfe4c085656,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550483691014934626, guid: 689efc0674a88f543832ccfe4c085656,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550483691014934626, guid: 689efc0674a88f543832ccfe4c085656,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.08
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4550483691014934626, guid: 689efc0674a88f543832ccfe4c085656,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.72
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4550483691014934626, guid: 689efc0674a88f543832ccfe4c085656,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.18
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4550483691014934626, guid: 689efc0674a88f543832ccfe4c085656,
         type: 3}
@@ -62,10 +77,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4550483691014934626, guid: 689efc0674a88f543832ccfe4c085656,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4550483691014934627, guid: 689efc0674a88f543832ccfe4c085656,
         type: 3}
       propertyPath: m_Radius
-      value: 0.91
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 4550483691014934627, guid: 689efc0674a88f543832ccfe4c085656,
         type: 3}
@@ -91,7 +111,7 @@ PrefabInstance:
     - target: {fileID: 4550483691014934629, guid: 689efc0674a88f543832ccfe4c085656,
         type: 3}
       propertyPath: m_Name
-      value: pfChristmasObj_6
+      value: pfChristmasObj_6_saddle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 689efc0674a88f543832ccfe4c085656, type: 3}
@@ -121,17 +141,17 @@ PrefabInstance:
     - target: {fileID: 6432865698923284581, guid: 056580141d8ac4aa48cfc091e83d213f,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 85
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 6432865698923284581, guid: 056580141d8ac4aa48cfc091e83d213f,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 85
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 6432865698923284581, guid: 056580141d8ac4aa48cfc091e83d213f,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 85
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 6432865698923284581, guid: 056580141d8ac4aa48cfc091e83d213f,
         type: 3}

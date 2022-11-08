@@ -59,7 +59,7 @@ public class PlayerCollector : MonoBehaviour
     public void SetMaxItemWeightOffset(int weightOffset)
     {
         _maxItemWeight = _maxItemWeightBase + weightOffset;
-        transform.DOScale(1f + ((float)weightOffset) / 10f, 0.2f);
+        transform.DOScale(1f + ((float)weightOffset) / 2f, 0.2f);
     }
 
 

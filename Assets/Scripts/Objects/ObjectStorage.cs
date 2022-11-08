@@ -27,7 +27,7 @@ public class ObjectStorage : MonoBehaviour
                     Transform item = itemsStack.Pop();
                     float duration = Vector3.Distance(item.position, _suckPoint.position);
                     item.DOMove(_suckPoint.position, duration);
-                    item.DOScale(0.2f, duration);
+                    item.DOScale(0.01f, duration);
                     CollectableObj itemObject = item.GetComponent<CollectableObj>();
                     itemObject.Invoke("Released", duration + 0.1f);
 
