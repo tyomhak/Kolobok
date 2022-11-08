@@ -30,7 +30,7 @@ public class PlayerCollector : MonoBehaviour
         {
             if (other.gameObject.TryGetComponent<CollectableObj>(out CollectableObj colObj))
             {
-                int objWeight = colObj.Weight();
+                int objWeight = colObj.GetWeight();
                 if (CanCarry(objWeight))
                 {
                     _currCarryWeight += objWeight;

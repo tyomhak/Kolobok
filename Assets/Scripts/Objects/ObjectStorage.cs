@@ -25,13 +25,14 @@ public class ObjectStorage : MonoBehaviour
                 while (itemsStack.Count > 0)
                 {
                     Transform item = itemsStack.Pop();
-                    //item.SetParent(null);
                     float duration = Vector3.Distance(item.position, _suckPoint.position);
                     item.DOMove(_suckPoint.position, duration);
                     item.DOScale(0.2f, duration);
+                    CollectableObj itemObject = item.GetComponent<CollectableObj>();
+                    itemObject.Invoke("Released", duration + 0.1f);
 
-                    _moneyManager.AddAmount(item.GetComponent<CollectableObj>().Weight() * 2);
-                    Destroy(item.gameObject, duration);
+                    _moneyManager.AddAmount(item.GetComponent<CollectableObj>().GetWeight() * 2);
+                    //Destroy(item.gameObject, duration);
                 }
 
                 playerCollector.ResetInventory();

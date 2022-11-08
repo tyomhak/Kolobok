@@ -23,6 +23,11 @@ namespace SimpleInputNamespace
 		private RectTransform thumbTR;
 
 		[SerializeField]
+		private bool customOpacity;
+		[SerializeField]
+		private float _cachedOpacity;
+
+		[SerializeField]
 		private float movementAreaRadius = 75f;
 
 		[Tooltip( "Radius of the deadzone at the center of the joystick that will yield no input" )]
@@ -61,6 +66,9 @@ namespace SimpleInputNamespace
 
 			if( isDynamicJoystick )
 			{
+				if (!customOpacity)
+					_cachedOpacity = 1f;
+
 				opacity = 0f;
 				thumb.raycastTarget = false;
 				if( background )
@@ -207,7 +215,7 @@ namespace SimpleInputNamespace
 				return;
 
 			if( joystickHeld )
-				opacity = Mathf.Min( 1f, opacity + Time.unscaledDeltaTime * 4f );
+				opacity = Mathf.Min( _cachedOpacity, opacity + Time.unscaledDeltaTime * 4f );
 			else
 				opacity = Mathf.Max( 0f, opacity - Time.unscaledDeltaTime * 4f );
 
