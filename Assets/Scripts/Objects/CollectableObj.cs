@@ -9,11 +9,19 @@ public class CollectableObj : MonoBehaviour
     [SerializeField] private ObjectConfigSO _objectConfig;
 
     Vector3 _defaultPosition;
-    Vector3 _defaultScale;
+    float _defaultScale;
 
 
     // helper objects
     private WaitForSeconds _releaseDelayTimer;
+
+    private void Awake()
+    {
+        _defaultPosition = transform.position;
+        _defaultScale = _objectConfig.weight;
+
+        ResetTransform();
+    }
 
     private void Start()
     {
@@ -23,8 +31,7 @@ public class CollectableObj : MonoBehaviour
             mc.enabled = false;
         }
 
-        _defaultPosition = transform.position;
-        _defaultScale = transform.localScale;
+        
     }
 
     public int GetWeight() { return _objectConfig.weight; }
@@ -37,8 +44,14 @@ public class CollectableObj : MonoBehaviour
     public void Released()
     {
         transform.SetParent(null);
-        transform.SetLocalPositionAndRotation(_defaultPosition, Quaternion.identity);
-        transform.DOScale(_defaultScale.x, 0.1f);
+        ResetTransform();
+
         _collider.enabled = true;
+    }
+
+    private void ResetTransform()
+    {
+        transform.SetLocalPositionAndRotation(_defaultPosition, Quaternion.identity);
+        transform.DOScale(_defaultScale, 0.1f);
     }
 }

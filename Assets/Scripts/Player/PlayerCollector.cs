@@ -1,14 +1,17 @@
+using Cinemachine;
 using DG.Tweening;
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody), typeof(Collider))]
 public class PlayerCollector : MonoBehaviour
 {
+    [SerializeField] private Cinemachine.CinemachineVirtualCamera _camera_cm;
+    [SerializeField] private bool _shiftCameraPosition;
+    CinemachineTransposer _cam_cm_transposer;
+    Vector3 _followOffsetBase;
+
     [SerializeField] private int _maxCarryWeightBase;
     private int _maxCarryWeight;
     private int _currCarryWeight;
@@ -22,6 +25,15 @@ public class PlayerCollector : MonoBehaviour
     {
         _inventoryItems = new Stack<Transform>();
         _currCarryWeight = 0;
+    }
+
+    private void Start()
+    {
+        if (_shiftCameraPosition)
+        {
+            _cam_cm_transposer = _camera_cm.GetCinemachineComponent<CinemachineTransposer>();
+            _followOffsetBase = _cam_cm_transposer.m_FollowOffset;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -59,7 +71,10 @@ public class PlayerCollector : MonoBehaviour
     public void SetMaxItemWeightOffset(int weightOffset)
     {
         _maxItemWeight = _maxItemWeightBase + weightOffset;
-        transform.DOScale(1f + ((float)weightOffset) / 2f, 0.2f);
+        transform.DOScale(1f + ((float)weightOffset), 0.2f);
+
+        if (_shiftCameraPosition)
+            _camera_zoom_out(weightOffset, 0.2f);
     }
 
 
@@ -72,5 +87,27 @@ public class PlayerCollector : MonoBehaviour
     {
         _inventoryItems.Clear();
         _currCarryWeight = 0;
+    }
+
+
+    private void _camera_zoom_out(float camDistanceOffset, float scaleDuration)
+    {
+        if (camDistanceOffset <= 1f)
+            camDistanceOffset = 1f;
+
+        var transposer = _camera_cm.GetCinemachineComponent<CinemachineTransposer>();
+        var newOffset = _followOffsetBase* camDistanceOffset;
+        //transposer.m_FollowOffset = newOffset;
+        StartCoroutine(_camera_zoom(newOffset));
+    }
+
+    IEnumerator _camera_zoom(Vector3 newFollowOffset)
+    {
+
+        while (_cam_cm_transposer.m_FollowOffset != newFollowOffset)
+        {
+            _cam_cm_transposer.m_FollowOffset = Vector3.Slerp(_cam_cm_transposer.m_FollowOffset, newFollowOffset, 0.1f);
+            yield return new WaitForSeconds(0.01f);
+        }
     }
 }
