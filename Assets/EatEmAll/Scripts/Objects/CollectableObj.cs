@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CollectableObj : MonoBehaviour
@@ -19,6 +20,38 @@ public class CollectableObj : MonoBehaviour
     {
         _defaultPosition = transform.position;
         _defaultScale = _objectConfig.weight;
+
+        if (_collider == null)
+        {
+            Collider[] colliderList = GetComponents<Collider>();
+            if (colliderList.Length == 1)
+            {
+                _collider = colliderList[0];
+
+                //foreach (Collider col in colliderList)
+                //    col.isTrigger = true;
+            }
+            else
+            {
+                foreach (Collider col in colliderList)
+                    col.enabled = false;
+
+                SphereCollider collider = transform.AddComponent<SphereCollider>();
+                collider.radius = collider.radius * 0.6f;
+                _collider = collider;
+            }
+
+            //if (TryGetComponent<Collider>(out Collider[] colliders))
+            //{
+            //    _collider = GetComponent<Collider>();
+            //}
+            //else
+            //{
+            //    _collider = transform.AddComponent<SphereCollider>();
+            //}
+
+            _collider.isTrigger = true;
+        }
 
         ResetTransform();
     }

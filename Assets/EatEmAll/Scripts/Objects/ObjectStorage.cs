@@ -25,6 +25,7 @@ public class ObjectStorage : MonoBehaviour
                 while (itemsStack.Count > 0)
                 {
                     Transform item = itemsStack.Pop();
+                    item.SetParent(null);
                     float duration = Vector3.Distance(item.position, _suckPoint.position);
                     item.DOMove(_suckPoint.position, duration);
                     item.DOScale(0.01f, duration);
