@@ -1,4 +1,4 @@
-using JetBrains.Annotations;
+using eea;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -38,10 +38,10 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateCollector()
     {
-        _playerCollector.SetMaxCarryWeightOffset(_maxCarryWeightLevel);
+        _playerCollector?.SetMaxCarryWeightOffset(_maxCarryWeightLevel);
         PlayerPrefs.SetInt(CarryWeightLevelS, _maxCarryWeightLevel);
 
-        _playerCollector.SetMaxItemWeightOffset(_maxItemWeightLevel);
+        _playerCollector?.SetMaxItemWeightOffset(_maxItemWeightLevel);
         PlayerPrefs.SetInt(ItemWeightCapLevelS, _maxItemWeightLevel);
     }
 

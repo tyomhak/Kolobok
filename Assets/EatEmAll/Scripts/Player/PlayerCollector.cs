@@ -92,6 +92,9 @@ public class PlayerCollector : MonoBehaviour
 
     private void _camera_zoom_out(float camDistanceOffset, float scaleDuration)
     {
+        if (!_cam_cm_transposer)
+            return;
+
         if (camDistanceOffset <= 1f)
             camDistanceOffset = 1f;
 
@@ -103,7 +106,6 @@ public class PlayerCollector : MonoBehaviour
 
     IEnumerator _camera_zoom(Vector3 newFollowOffset)
     {
-
         while (_cam_cm_transposer.m_FollowOffset != newFollowOffset)
         {
             _cam_cm_transposer.m_FollowOffset = Vector3.Slerp(_cam_cm_transposer.m_FollowOffset, newFollowOffset, 0.1f);
